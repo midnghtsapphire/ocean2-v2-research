@@ -12,7 +12,14 @@ const requiredFiles = [
   'Walter-Evans-Ocean2-V2-Roadmap.md'
 ];
 
-const missing = requiredFiles.filter((file) => !fs.existsSync(file));
+let missing = [];
+try {
+  missing = requiredFiles.filter((file) => !fs.existsSync(file));
+} catch (error) {
+  console.error('Unable to validate required files due to a filesystem error.');
+  console.error(error instanceof Error ? error.message : String(error));
+  process.exit(1);
+}
 
 if (missing.length > 0) {
   console.error('Missing required files:');

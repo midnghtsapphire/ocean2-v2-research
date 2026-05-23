@@ -7,7 +7,14 @@ const docs = [
 ];
 
 for (const doc of docs) {
-  const content = fs.readFileSync(doc, 'utf8');
+  let content;
+  try {
+    content = fs.readFileSync(doc, 'utf8');
+  } catch (error) {
+    console.error(`Build validation failed: could not read ${doc}.`);
+    console.error(error instanceof Error ? error.message : String(error));
+    process.exit(1);
+  }
   if (!content.trim()) {
     console.error(`Build validation failed: ${doc} is empty.`);
     process.exit(1);
