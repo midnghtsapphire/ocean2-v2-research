@@ -1,6 +1,6 @@
-# Ocean-2 V2 Research
+# Ocean2 V2 Research
 
-Ocean-2 V2 Research is the ship-to-market (S2M) research repository for the Ocean-2 V2 wave-energy concept: a deep-ocean wave energy converter using a bobbing-ball overtopping cycle and optional onboard hydrogen conversion.
+Ocean2 V2 Research is the ship-to-market (S2M) research repository for the Ocean2 V2 wave-energy concept: a deep-ocean wave energy converter using a bobbing-ball overtopping cycle and optional onboard hydrogen conversion.
 
 ## What this repository does now
 
@@ -35,6 +35,7 @@ Directional objective: establish a credible path to eight-figure annualized proj
 ## Quick start
 
 ```bash
+npm install
 npm test
 npm run build
 ```
