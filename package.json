@@ -1,0 +1,10 @@
+{
+  "name": "ocean2-v2-research",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Ocean2 V2 wave energy ship-to-market research and revvel-standards baseline",
+  "scripts": {
+    "test": "node scripts/test-baseline.js",
+    "build": "node scripts/build-baseline.js"
+  }
+}
