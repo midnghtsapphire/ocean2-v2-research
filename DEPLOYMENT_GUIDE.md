@@ -11,7 +11,7 @@ This repository is documentation-first. Deployment currently refers to publishin
 ## Local validation
 
 ```bash
-# Optional today (no runtime deps yet), kept for future dependency additions
+# No dependencies to install yet; npm install is included for forward compatibility.
 npm install
 npm test
 npm run build
