@@ -11,6 +11,7 @@ This repository is documentation-first. Deployment currently refers to publishin
 ## Local validation
 
 ```bash
+# Optional today (no runtime deps yet), kept for future dependency additions
 npm install
 npm test
 npm run build
@@ -27,4 +28,3 @@ npm run build
 ## Deployment automation reference
 - Use Vercel Git integration to auto-deploy on pushes to the configured branch.
 - Protect the production branch with required checks (`npm test`, `npm run build`).
-

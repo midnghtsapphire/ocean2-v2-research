@@ -35,6 +35,7 @@ Directional objective: establish a credible path to eight-figure annualized proj
 ## Quick start
 
 ```bash
+# Optional today (no runtime deps yet), kept for forward compatibility:
 npm install
 npm test
 npm run build
