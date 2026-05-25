@@ -19,9 +19,9 @@ npm run build
 
 ## Vercel website-in-test setup
 1. Import the repository into Vercel.
-2. Framework preset: **Other** (or static if/when a site is added).
+2. Framework preset: **Other / Static Site**.
 3. Build command: `npm run build`
-4. Output directory: `.` (documentation repo baseline)
+4. Output directory: `.` (serves repository root including `index.html`)
 5. Set production branch to `main` when ready.
 6. Confirm deployment URL and update `README.md` if different from placeholder.
 

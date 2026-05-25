@@ -3,8 +3,14 @@ const fs = require('fs');
 const docs = [
   'README.md',
   'GO_TO_MARKET.md',
-  'DEPLOYMENT_GUIDE.md'
+  'DEPLOYMENT_GUIDE.md',
+  'index.html'
 ];
+
+const requiredPhrasesByFile = {
+  'README.md': ['## Research engine and suggestions', '## Assets inventory', '## Artifacts inventory'],
+  'index.html': ['Research Engine', 'Assets Inventory', 'Artifacts Inventory']
+};
 
 for (const doc of docs) {
   let content;
@@ -19,6 +25,13 @@ for (const doc of docs) {
     console.error(`Build validation failed: ${doc} is empty.`);
     process.exit(1);
   }
+
+  const requiredPhrases = requiredPhrasesByFile[doc] || [];
+  const missingPhrases = requiredPhrases.filter((phrase) => !content.includes(phrase));
+  if (missingPhrases.length > 0) {
+    console.error(`Build validation failed: ${doc} is missing required section(s): ${missingPhrases.join(', ')}`);
+    process.exit(1);
+  }
 }
 
-console.log('Build baseline passed. Core docs are non-empty.');
+console.log('Build baseline passed. Core docs and website sections are present.');
