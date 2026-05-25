@@ -7,9 +7,17 @@ const docs = [
   'index.html'
 ];
 
-const requiredPhrasesByFile = {
-  'README.md': ['## Research engine and suggestions', '## Assets inventory', '## Artifacts inventory'],
-  'index.html': ['Research Engine', 'Assets Inventory', 'Artifacts Inventory']
+const requiredPatternsByFile = {
+  'README.md': [
+    { pattern: /^##\s+Research engine and suggestions$/m, description: 'Research engine and suggestions section heading' },
+    { pattern: /^##\s+Assets inventory$/m, description: 'Assets inventory section heading' },
+    { pattern: /^##\s+Artifacts inventory$/m, description: 'Artifacts inventory section heading' }
+  ],
+  'index.html': [
+    { pattern: /data-s2m-section="research-engine"/, description: 'research-engine website marker' },
+    { pattern: /data-s2m-section="assets-inventory"/, description: 'assets-inventory website marker' },
+    { pattern: /data-s2m-section="artifacts-inventory"/, description: 'artifacts-inventory website marker' }
+  ]
 };
 
 for (const doc of docs) {
@@ -26,10 +34,11 @@ for (const doc of docs) {
     process.exit(1);
   }
 
-  const requiredPhrases = requiredPhrasesByFile[doc] || [];
-  const missingPhrases = requiredPhrases.filter((phrase) => !content.includes(phrase));
-  if (missingPhrases.length > 0) {
-    console.error(`Build validation failed: ${doc} is missing required section(s): ${missingPhrases.join(', ')}`);
+  const requiredPatterns = requiredPatternsByFile[doc] || [];
+  const missingPatterns = requiredPatterns.filter(({ pattern }) => !pattern.test(content));
+  if (missingPatterns.length > 0) {
+    const missingDescriptions = missingPatterns.map(({ description }) => description);
+    console.error(`Build validation failed: ${doc} is missing required section(s): ${missingDescriptions.join(', ')}`);
     process.exit(1);
   }
 }
