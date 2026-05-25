@@ -9,13 +9,35 @@ Ocean2 V2 Research is the ship-to-market (S2M) research repository for the Ocean
   - `Walter-Evans-Ocean2-V2-Invention-Disclosure.md`
   - `Walter-Evans-Ocean2-V2-Roadmap.md`
 - Tracks revvel-standards S2M documentation for planning, security, deployment, brand, and go-to-market execution.
-- Provides baseline validation scripts (`npm test`, `npm run build`) to keep documentation and structure release-ready.
+- Provides baseline validation scripts (`npm test`, `npm run build`) to keep documentation, assets, artifacts, and website structure release-ready.
 
 ## Website in test (Vercel)
 
 - Target: `https://ocean2-v2-research.vercel.app`
-- Status: Deployment URL placeholder for revvel-standards traceability. Configure Vercel project + envs when web UI goes live.
+- Status: Static website surface now included via `index.html` for one-iteration S2M testing.
 - Automation reference: See `DEPLOYMENT_GUIDE.md` for Vercel deployment steps.
+
+## Research engine and suggestions
+
+- Core market and technical research lives in `GO_TO_MARKET.md` (market context, wedge strategy, risks, and execution priorities).
+- Foundational technical evidence and invention positioning:
+  - `Walter-Evans-Ocean2-V2-SSRN-Paper.md`
+  - `Walter-Evans-Ocean2-V2-Invention-Disclosure.md`
+  - `Walter-Evans-Ocean2-V2-Roadmap.md`
+- Website-first summary surface: `index.html` exposes research highlights and launch priorities for immediate review.
+
+## Assets inventory
+
+- `ocean2_infographic.jpg` — core visual explainer asset
+- `ocean2_roadmap.jpg` — roadmap visual asset
+- `infographic_notes.md` — supporting copy + usage notes for infographic assets
+
+## Artifacts inventory
+
+- `Walter-Evans-Ocean2-V2-SSRN-Paper.md` — technical artifact
+- `Walter-Evans-Ocean2-V2-Invention-Disclosure.md` — IP artifact
+- `Walter-Evans-Ocean2-V2-Roadmap.md` — commercialization artifact
+- `GO_TO_MARKET.md` — S2M execution artifact
 
 ## S2M value analysis
 
@@ -48,3 +70,4 @@ npm run build
 - `BRAND_GUIDELINES.md` — narrative and brand system for Ocean2 communications
 - `SECURITY.md` — responsible disclosure and security posture for docs + automation
 - `CHANGELOG.md` — tracked release changes
+- `index.html` — website-in-test surface for S2M research, assets, and artifacts
