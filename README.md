@@ -1,5 +1,9 @@
 # Ocean2 V2 Research
 
+
+<!-- AUTO-PACKAGE-BADGES:START -->
+
+<!-- AUTO-PACKAGE-BADGES:END -->
 Ocean2 V2 Research is the ship-to-market (S2M) research repository for the Ocean2 V2 wave-energy concept: a deep-ocean wave energy converter using a bobbing-ball overtopping cycle and optional onboard hydrogen conversion.
 
 ## What this repository does now
